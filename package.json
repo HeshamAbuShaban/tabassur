@@ -1,0 +1,29 @@
+{
+  "name": "tabassur",
+  "version": "1.0.0",
+  "description": "تَبَصُّر - An immersive contemplation journey through the cosmos, from the Cosmic Web to the atom",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "fetch-data": "node scripts/fetchSDSSData.js"
+  },
+  "keywords": [
+    "contemplation",
+    "cosmos",
+    "quran",
+    "science",
+    "threejs",
+    "visualization"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.186.0",
+    "vite": "^8.3.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}
