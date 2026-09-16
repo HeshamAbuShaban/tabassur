@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"/>
+<title>تَبَصُّر · TABASSUR — 4D Observational Space-Time Navigator</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter/index.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/amiri/index.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/cormorant-garamond/index.css"/>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<canvas id="gl"></canvas>
+<div id="vig"></div>
+<div id="hs"></div>
+
+<div id="hud">
+  <div id="brand" class="pnl">
+    <div class="t">تَبَصُّر</div>
+    <div class="s">Tabassur</div>
+    <div class="r">4D Observational Space-Time Navigator</div>
+  </div>
+
+  <div id="tele" class="pnl">
+    <div class="row"><span class="k">Scale</span><span class="v big" id="tScale">—</span></div>
+    <div class="row"><span class="k">Extent</span><span class="v" id="tMag">—</span></div>
+    <div class="row"><span class="k">Epoch</span><span class="v" id="tTime">—</span></div>
+    <div class="row"><span class="k">Renderer</span><span class="v" id="tFps">—</span></div>
+    <div id="badge">WEBGL2 · GLSL ES 3.00 · RAYMARCHED VOLUMES · LOG-DEPTH</div>
+  </div>
+
+  <div id="card" class="pnl">
+    <div class="idx" id="cIdx">—</div>
+    <div class="nm" id="cName">—</div>
+    <div class="nmar ar" id="cNameAr">—</div>
+    <div class="meta">
+      <div class="m"><b>Class</b><span id="cClass">—</span></div>
+      <div class="m"><b>Extent</b><span id="cScale">—</span></div>
+      <div class="m"><b>Axis</b><span id="cAxis">—</span></div>
+    </div>
+    <div id="verse"></div>
+  </div>
+
+  <div id="rail" class="pnl"><div class="spine"></div><div id="cursor"></div></div>
+
+  <div id="time" class="pnl">
+    <div id="eraWrap"><div id="era"><span class="e"></span><span class="a ar"></span></div></div>
+    <div id="track"><div id="bar"></div><div id="fill"></div><div id="head"></div></div>
+    <div id="tbar">
+      <div id="tRead">—</div>
+      <div id="tCtl">
+        <button class="ic" id="bRev" title="Reverse"><svg viewBox="0 0 10 10"><path d="M9 0v10L1 5z"/></svg></button>
+        <button class="ic" id="bPlay" title="Play / pause temporal axis"><svg viewBox="0 0 10 10"><path d="M1 0l8 5-8 5z"/></svg></button>
+        <button class="ic" id="bFwd" title="Forward"><svg viewBox="0 0 10 10"><path d="M1 0v10l8-5z"/></svg></button>
+        <button class="ic wide" id="bSlice">Sectio · مقطع</button>
+        <button class="ic wide" id="bSnd">Ambience</button>
+        <button class="ic wide" id="bQ">Quality · High</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="hint">
+    <div><b>Drag</b> orbit &nbsp;·&nbsp; <b>Wheel / pinch</b> traverse scale</div>
+    <div><b>Click ◎</b> branch the path &nbsp;·&nbsp; <b>Drag the line</b> scrub time</div>
+    <div><kbd>space</kbd> play <kbd>←→</kbd> time <kbd>↑↓</kbd> scale <kbd>R</kbd> reflect <kbd>H</kbd> hud</div>
+  </div>
+
+  <div id="step">
+    <button class="ic" id="zIn">+</button>
+    <button class="ic" id="zOut">−</button>
+  </div>
+</div>
+
+<div id="intro">
+  <div class="in">
+    <div class="glyph">تَبَصُّر</div>
+    <h1>Tabassur</h1>
+    <div class="sub">4D Observational Space-Time Navigator · الآفاق والأنفس</div>
+    <div class="v">سَنُرِيهِمْ آيَاتِنَا فِي الْآفَاقِ وَفِي أَنفُسِهِمْ حَتَّىٰ يَتَبَيَّنَ لَهُمْ أَنَّهُ الْحَقُّ</div>
+    <div class="vt">“We will show them Our signs in the horizons and within themselves, until it becomes clear to them that it is the truth.”</div>
+    <div class="vr">Qur'an 41:53</div>
+    <button id="begin">Begin the Descent</button>
+    <div class="ft">10<sup>26</sup> m → 10<sup>−18</sup> m &nbsp;·&nbsp; one unbroken continuum<br>
+      every luminous point is a branch &nbsp;·&nbsp; every branch owns its own time</div>
+  </div>
+</div>
+
+<div id="fatal"><div>This navigator requires WebGL2.<br>تطلب هذا المرصد دعم WebGL2.</div></div>
+
+
+  <script src="main.js" defer></script>
+</body>
+</html>
